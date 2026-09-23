@@ -19,6 +19,7 @@ if (!process.env.SMTP_LOGIN || !process.env.SMTP_PASSW) {
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
+  family: 4,
   auth: {
     user: process.env.SMTP_LOGIN,
     pass: process.env.SMTP_PASSW,
